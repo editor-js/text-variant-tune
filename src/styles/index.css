@@ -1,0 +1,12 @@
+.cdx-text-variant--call-out {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.cdx-text-variant--citation {
+  font-style: italic;
+}
+
+.cdx-text-variant--details {
+  font-size: 0.8em;
+}
