@@ -5,13 +5,13 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
         ],
       },
     ],
   },
   output: {
-    filename: 'text-variants-tune.js',
+    filename: 'text-variant-tune.js',
     library: 'TextVariantsTune',
     libraryTarget: 'umd',
     libraryExport: 'default',

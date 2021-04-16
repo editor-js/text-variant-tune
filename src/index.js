@@ -33,7 +33,8 @@ export const TextVariant = {
  */
 
 /**
- * This Block Tunes allows user to select some of predefined text variants.
+ * This Block Tunes allows user to select some of predefined text variant.
+ *
  * @see TextVariant enum for the details.
  * @uses Block Tunes API  {@link https://editorjs.io/block-tunes-api}
  */
@@ -118,7 +119,7 @@ export default class TextVariantTune {
 
   /**
    * Handler for Tune controls click
-   * Toggles variants
+   * Toggles the variant
    *
    * @param {MouseEvent} event - click
    * @returns {void}

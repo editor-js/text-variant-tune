@@ -1,2 +1,3 @@
-# text-variants-tune
-Block Tune for text variants: Call-out, Citation, Details
+# text-variant-tune
+
+Block Tune for text variant: Call-out, Citation, Details
