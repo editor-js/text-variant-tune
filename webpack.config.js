@@ -8,11 +8,18 @@ module.exports = {
           'css-loader',
         ],
       },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+        options: {
+          removeSVGTagAttrs: false,
+        },
+      },
     ],
   },
   output: {
     filename: 'text-variant-tune.js',
-    library: 'TextVariantsTune',
+    library: 'TextVariantTune',
     libraryTarget: 'umd',
     libraryExport: 'default',
   },

@@ -1,6 +1,8 @@
-.cdx-text-variant--call-out {
-  border: 1px solid red;
-  padding: 10px;
+.cdx-text-variant--call-out .ce-block__content {
+  border: 1px solid rgb(255, 135, 135);
+  padding: 8px 16px;
+  border-radius: 6px;
+  box-shadow: 0 0 0 5px rgba(255, 120, 84, 0.16);
 }
 
 .cdx-text-variant--citation {
@@ -8,5 +10,14 @@
 }
 
 .cdx-text-variant--details {
-  font-size: 0.8em;
+  font-size: 0.84em;
+}
+
+.cdx-text-variant__toggler {
+  color: #000000;
+}
+
+.cdx-text-variant__toggler svg {
+  width: 20px;
+  height: 20px;
 }

@@ -1,5 +1,8 @@
 import './styles/index.css';
 import * as $ from './utils/dom';
+import IconCallOut from './assets/call-out.svg';
+import IconCitation from './assets/citation.svg';
+import IconDetails from './assets/details.svg';
 
 /**
  * Available predefined variants
@@ -57,17 +60,17 @@ export default class TextVariantTune {
     this.variants = [
       {
         name: TextVariant.CallOut,
-        icon: '1',
+        icon: IconCallOut,
         title: this.api.i18n.t('Call-out'),
       },
       {
         name: TextVariant.Citation,
-        icon: '2',
+        icon: IconCitation,
         title: this.api.i18n.t('Citation'),
       },
       {
         name: TextVariant.Details,
-        icon: '3',
+        icon: IconDetails,
         title: this.api.i18n.t('Details'),
       },
     ];
@@ -85,6 +88,15 @@ export default class TextVariantTune {
   }
 
   /**
+   * CSS selectors used in Tune
+   */
+  static get CSS() {
+    return {
+      toggler: 'cdx-text-variant__toggler',
+    };
+  }
+
+  /**
    * Create Tunes controls wrapper that will be appended to the Block Tunes panel
    *
    * @returns {Element}
@@ -93,7 +105,7 @@ export default class TextVariantTune {
     const tuneWrapper = $.make('div', '');
 
     this.variants.forEach(({ name, icon, title }) => {
-      const toggler = $.make('div', this.api.styles.settingsButton, {
+      const toggler = $.make('div', [this.api.styles.settingsButton, TextVariantTune.CSS.toggler], {
         innerHTML: icon,
       });
 
