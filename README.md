@@ -2,7 +2,7 @@
 
 Editor.js Block Tune allows applying one of defined text variant: **Call-out**, **Citation**, and **Details** to any block.
 
-![](./assets/tunes-overview.png)
+<img src="./assets/tunes-overview.png" style="max-width: 500px" />
 
 ## Variants
 
@@ -10,19 +10,19 @@ Editor.js Block Tune allows applying one of defined text variant: **Call-out**, 
 
 For important information the author wants to emphasize.
 
-![](./assets/call-out.png)
+<img src="./assets/call-out.png" style="max-width: 500px" />
 
 ### Citation
 
 To cite some full-text from a different source without using the Quote tool.
 
-![](./assets/citation.png)
+<img src="./assets/citation.png" style="max-width: 500px" />
 
 ### Details
 
 To add some information that is less important.
 
-![](./assets/details.png)
+<img src="./assets/details.png" style="max-width: 500px" />
 
 ## How to use
 
