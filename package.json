@@ -1,7 +1,7 @@
 {
-  "name": "text-variant-tune",
+  "name": "@editorjs/text-variant-tune",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "dist/text-variant-tune.js",
   "repository": "https://github.com/editor-js/text-variant-tune",
   "author": "CodeX <team@codex.so>",
   "license": "MIT",
