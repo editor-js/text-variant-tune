@@ -138,8 +138,11 @@ export default class TextVariantTune {
    */
   tuneClicked(event) {
     const tune = event.target.closest(`.${this.api.styles.settingsButton}`);
+    const isEnabled = tune.classList.contains(this.api.styles.settingsButtonActive);
 
-    this.variant = tune.dataset.name;
+    tune.classList.toggle(this.api.styles.settingsButtonActive, !isEnabled);
+
+    this.variant = !isEnabled ? tune.dataset.name : '';
   }
 
   /**
