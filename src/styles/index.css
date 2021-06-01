@@ -3,6 +3,8 @@
   padding: 8px 16px;
   border-radius: 6px;
   box-shadow: 0 0 0 5px rgba(255, 120, 84, 0.16);
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
 }
 
 .cdx-text-variant--citation {
