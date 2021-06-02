@@ -29,14 +29,14 @@ To add some information that is less important.
 1. Install
 
 ```js
-yarn add text-variant-tune
+yarn add @editorjs/text-variant-tune
 ```
 
 2. Connect
 
 ```js
 import EditorJS from '@editorjs/editorjs';
-import TextVariantTune from 'text-variant-tune';
+import TextVariantTune from '@editorjs/text-variant-tune';
 
 /**
  * Editor.js configuration
@@ -62,7 +62,7 @@ Optionally, you can connect this Tune only for specified blocks:
 
 ```js
 import EditorJS from '@editorjs/editorjs';
-import TextVariantTune from 'text-variant-tune';
+import TextVariantTune from '@editorjs/text-variant-tune';
 
 /**
  * Editor.js configuration
