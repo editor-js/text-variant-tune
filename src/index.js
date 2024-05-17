@@ -143,6 +143,8 @@ export default class TextVariantTune {
     tune.classList.toggle(this.api.styles.settingsButtonActive, !isEnabled);
 
     this.variant = !isEnabled ? tune.dataset.name : '';
+
+    this.block.dispatchChange();
   }
 
   /**
