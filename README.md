@@ -32,6 +32,10 @@ To add some information that is less important.
 yarn add @editorjs/text-variant-tune
 ```
 
+```js
+npm i --save-dev @editorjs/text-variant-tune
+```
+
 2. Connect
 
 ```js
