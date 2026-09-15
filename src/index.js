@@ -88,63 +88,23 @@ export default class TextVariantTune {
   }
 
   /**
-   * CSS selectors used in Tune
-   */
-  static get CSS() {
-    return {
-      toggler: 'cdx-text-variant__toggler',
-    };
-  }
-
-  /**
-   * Create Tunes controls wrapper that will be appended to the Block Tunes panel
+   * Create menu items for the Block Tunes panel
    *
-   * @returns {Element}
+   * @returns {MenuConfig}
    */
   render() {
-    const tuneWrapper = $.make('div', '');
+    return this.variants.map(({ name, icon, title }) => ({
+      icon,
+      title,
+      name,
+      isActive: this.data === name,
+      closeOnActivate: true,
+      onActivate: () => {
+        this.variant = this.data === name ? '' : name;
 
-    this.variants.forEach(({ name, icon, title }) => {
-      const toggler = $.make('div', [this.api.styles.settingsButton, TextVariantTune.CSS.toggler], {
-        innerHTML: icon,
-      });
-
-      toggler.dataset.name = name;
-
-      this.api.tooltip.onHover(toggler, title, {
-        placement: 'top',
-        hidingDelay: 500,
-      });
-
-      tuneWrapper.appendChild(toggler);
-    });
-
-    /**
-     * Delegate click event on all the controls
-     */
-    this.api.listeners.on(tuneWrapper, 'click', (event) => {
-      this.tuneClicked(event);
-    });
-
-    return tuneWrapper;
-  }
-
-  /**
-   * Handler for Tune controls click
-   * Toggles the variant
-   *
-   * @param {MouseEvent} event - click
-   * @returns {void}
-   */
-  tuneClicked(event) {
-    const tune = event.target.closest(`.${this.api.styles.settingsButton}`);
-    const isEnabled = tune.classList.contains(this.api.styles.settingsButtonActive);
-
-    tune.classList.toggle(this.api.styles.settingsButtonActive, !isEnabled);
-
-    this.variant = !isEnabled ? tune.dataset.name : '';
-
-    this.block.dispatchChange();
+        this.block.dispatchChange();
+      },
+    }));
   }
 
   /**
